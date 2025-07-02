@@ -9,6 +9,18 @@
   line-height: 1.4;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
 body {
   background-color: var(--background-color-w);
 }
@@ -25,6 +37,7 @@ body {
   --background-color-a-faded: rgba(150,146,146,0.8);
   --accent-color: #3892dc;
   --box-shadow: rgba(51,51,51, 0.5);
+  --text-color-d: #a29a9a;
 }
 
 .header {
@@ -61,6 +74,11 @@ body {
   transform: translateY(-100%);
   opacity: 0;
 }
+.hide {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 .logo {
   display: flex;
@@ -1050,6 +1068,7 @@ li.active-li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .fuckup {
@@ -1186,6 +1205,292 @@ li.active-li {
   cursor: pointer;
   color: black;
 } */
+
+.footer-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background-color-w);
+  background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+   url('../images/hero-b-brickwork.png') center center / cover no-repeat;
+  min-height: 300px;
+}
+
+.footer-a-p {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 40px 40px;
+  max-width: 700px;
+}
+
+.footer-a-tel {
+  cursor: pointer;
+}
+
+.footer-a-tel:hover {
+  color:var(--accent-color);
+}
+
+.footer-b {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-color-a);
+  color: var(--text-color-d);
+  
+  
+}
+
+.footer-b-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  
+  padding: 40px 40px;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  
+}
+
+.footer-b-topleft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 12px;
+  
+}
+
+.company-areas {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--background-color-w);
+}
+ 
+.footer-b-topleft-p {
+  font-size: 16px;
+}
+
+.r-p-i {
+  line-height: 2;
+}
+
+.r-p-i:hover {
+  color: var(--background-color-w);
+  cursor: pointer;
+}
+
+.areas:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.footer-b-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  padding: 40px 40px;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  
+
+}
+
+.footer-b-bottomleft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 12px;
+  
+}
+
+.g {
+  line-height: 2;
+}
+
+.ggg {
+  font-size: 20px;
+  
+}
+
+.gg:hover {
+  color: var(--background-color-w);
+  cursor: pointer;
+}
+
+.footer-b-footing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  align-items: center;
+  font-weight: 500;
+  padding: 40px 40px;
+  gap: 40px;
+  background-color: var(--text-color-a);
+  color: var(--text-color-d);
+  
+  
+}
+.footer-b-footing p {
+  display: flex;
+  flex-wrap: wrap; /* Or 'nowrap' if you never want line breaks */
+  gap: 8px; /* optional spacing between spans */
+  justify-content: center;
+  padding: 20px 0px;
+  border-top: var(--text-color-d) dotted 2px;
+  
+}
+
+.footing {
+  white-space: nowrap;
+}
+
+.footing:hover {
+  color: var(--background-color-w);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .footer-b {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    
+    padding: 20px 20px 0px 20px;
+  }
+  .footer-b-top {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    
+    padding: 20px 20px;
+    
+  }
+  .footer-b-bottom {
+    flex: 1;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    
+    padding: 20px 0px 0px 20px;
+    
+  }
+  .footer-b-topleft {
+    width: 100%;
+  }
+  .footer-b-bottomleft {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer-b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    padding: 40px 40px;
+    gap: 0px;
+    margin: 0;
+  }
+  .footer-b-top,
+  .footer-b-bottom {
+    flex: 0 0 50%;   /* do NOT allow grow/shrink, fixed 50% basis */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+    box-sizing: border-box; /* important for padding */
+    padding: 0 20px; /* optional padding */
+  }
+
+
+
+/*  .footer-b-top,
+  .footer-b-bottom {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    flex-direction: column;
+  }
+  .footer-b-topleft,
+  .footer-b-bottomleft {
+    width: 100%;
+  } */
+}  
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease forwards;
+}
+
+.footer-c {
+  background-color: var(--secondary-color);
+  color: var(--text-color-a);
+  padding: 20px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.foot-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 224px;
+  height: 80px;
+   
+  padding: 4px;
+}
+
+.foot-logo img {
+
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.bott {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  
+
+
+
+
+
 
 
 

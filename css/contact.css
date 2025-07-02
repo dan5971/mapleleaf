@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  word-spacing: 1px;
+  line-height: 1.4;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+}
+
+:root {
+  --primary-color: #252323;
+  --secondary-color: #ebe9e9;
+  --background-color-a: rgb(150, 146, 146);
+  --background-color-b: #ffffff;
+  --text-color-a: #333333;
+  --text-color-b: #696868;
+  --text-pureblack: #000000;
+  --background-color-w: #fbfbfb;
+  --background-color-a-faded: rgba(150,146,146,0.8);
+  --accent-color: #3892dc;
+  --box-shadow: rgba(51,51,51, 0.5);
+  --text-color-d: #a29a9a;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: var(--background-color-b);
+  margin-top: 250px;
+}
+
+.main-contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.main-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-color-a);
+  margin-bottom: 30px;
+  
+}
+
+.main-box {
+  flex: 1 0 0;
+  
+  min-width: 90%; /* ensure minimum width */
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--text-color-a);
+  padding: 20px 20px;
+  position: relative;
+  margin-top: 40px;
+  letter-spacing: ;
+    
+
+  
+}
+
+.main-icon-circle {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: var(--text-color-a);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-icon-circle i {
+  color: var(--background-color-w);
+  font-size: 40px;
+}
+
+.main-bold {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  
+}
+
+.main-normal a {
+  color: var(--text-color-a);
+}
+
+.main-normal a:hover {
+  color: var(--accent-color);
+}
+@media only screen and (min-width: 1000px) {
+  .main {
+    margin-top: 140px;
+    margin-bottom: 40px;
+  }
+  .main-contact {
+    flex-direction: row;       /* Switch to row layout */
+    justify-content: center;   /* Center the boxes horizontally */
+    gap: 40px;                 /* Optional: spacing between boxes */
+    max-width: 1200px;         /* Optional: constrain max width */
+    padding: 40px 40px 0px 40px;           /* Center container horizontally */
+  }
+  
+  .main-box {
+    flex: 1 1 0;               /* Make boxes grow/shrink evenly */
+    min-width: 0;              /* Prevent minimum width forcing wrapping */
+    margin-top: 0;             /* Remove vertical margin since it's horizontal now */
+  }
+
+
+}
